@@ -8,8 +8,8 @@ Aquí se incluye el código fuente de esos analizadores.
 ## Uso
 
 ```console
-.$ go build
-./psa
+$ go build
+$ ./psa
 Usage: ./psa <grammar> <file>
 
 where
