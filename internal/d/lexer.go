@@ -43,6 +43,8 @@ func NextToken(r *bufio.Reader) Token {
 			} else if unicode.IsLetter(c) {
 				consumeLetters(r)
 				return Id
+			} else if unicode.IsSpace(c) {
+				return NextToken(r)
 			}
 		}
 

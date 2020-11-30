@@ -1,13 +1,10 @@
-package d
+package g
 
 type Token int
 
 const (
 	Id = iota
-	Num
-	Lpar
-	Rpar
-	Comma
+	Ddot
 	Eof
 	Err
 )

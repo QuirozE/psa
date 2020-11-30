@@ -1,4 +1,4 @@
-package d
+package c
 
 import (
 	"bufio"
@@ -37,9 +37,9 @@ func S() {
 
 func T() {
 	switch currToken {
-	case Comma:
-		currToken = NextToken(r)
-		S()
+	case Id, Num, Lpar:
+		L()
+		T()
 	}
 }
 
@@ -54,9 +54,9 @@ func L() {
 		case Rpar:
 			currToken = NextToken(r)
 		default:
-			panic("Syntax error R")
+			panic("Syntax error")
 		}
 	default:
-		panic("Syntax error L:")
+		panic("Syntax error")
 	}
 }
